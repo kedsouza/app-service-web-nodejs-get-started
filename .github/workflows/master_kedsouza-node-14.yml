@@ -28,7 +28,7 @@ jobs:
           npm run test --if-present
       
       - name: Compress files as zip
-        run: cd .. && ls -la
+        run: tar -cf test.tar --exclude=./test.tar .
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
